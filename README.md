@@ -2,16 +2,30 @@
 
 A new Flutter project.
 
-## Getting Started
+## Flutter LifeCycle
 
-This project is a starting point for a Flutter application.
+- createState()
 
-NOM-43 수정 입니다.
+- initState()
 
-A few resources to get you started if this is your first Flutter project:
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- didChangeDependencies()
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- build()
+
+- didUpdateWidget()
+
+- setState()
+
+- deactivate()
+
+- dispose()
+
+## Layout
+
+정렬 방향에 따라 Main Axis가 달라진다.
+
+- Row
+가로가 Main Axis, 세로가 CrossAxis
+
+- Column
+가로가 CrossAxis, 세로가 MainAxis
