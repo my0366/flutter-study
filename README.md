@@ -1,6 +1,6 @@
 # flutter_study
 
-A new Flutter project.
+Flutter Study project.
 
 ## Flutter LifeCycle
 
