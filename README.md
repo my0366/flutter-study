@@ -4,21 +4,7 @@ A new Flutter project.
 
 ## Flutter LifeCycle
 
-- createState()
-
-- initState()
-
-- didChangeDependencies()
-
-- build()
-
-- didUpdateWidget()
-
-- setState()
-
-- deactivate()
-
-- dispose()
+![lifecycle](https://user-images.githubusercontent.com/72657893/214978729-4099c277-c37c-44da-baa5-be5e95890c45.jpg)
 
 ## Layout
 
@@ -29,3 +15,4 @@ A new Flutter project.
 
 - Column
 가로가 CrossAxis, 세로가 MainAxis
+
