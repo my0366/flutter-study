@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/Login.dart';
 // Uncomment lines 7 and 10 to view the visual layout at runtime.
 // import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
 void main() {
   // debugPaintSizeEnabled = true;
-  runApp(const MyApp());
+  runApp(const LayoutTutorialApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class LayoutTutorialApp extends StatelessWidget {
+  const LayoutTutorialApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
