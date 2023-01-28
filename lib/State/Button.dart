@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
+  const MyButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('MyButton was tapped!');
+        print('tapped!');
       },
       child: Container(
         height: 36.0,

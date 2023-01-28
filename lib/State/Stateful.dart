@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TestStatefulWidget extends StatefulWidget {
+  const TestStatefulWidget({super.key});
 
   @override
   _TestState createState() => _TestState();
@@ -12,12 +13,6 @@ class _TestState extends State<TestStatefulWidget> {
 
   void _increment() {
     setState(() {
-      // This call to setState tells the Flutter framework that
-      // something has changed in this State, which causes it to rerun
-      // the build method below so that the display can reflect the
-      // updated values. If you change _counter without calling
-      // setState(), then the build method won't be called again,
-      // and so nothing would appear to happen.
       _counter++;
     });
   }
@@ -26,7 +21,7 @@ class _TestState extends State<TestStatefulWidget> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print(_counter);
+        _increment();
       },
       child: Container(
         height: 36.0,
