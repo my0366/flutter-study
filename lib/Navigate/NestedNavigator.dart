@@ -84,8 +84,6 @@ class CollectPersonalInfoPage extends StatelessWidget {
       style: Theme.of(context).textTheme.headlineMedium!,
       child: GestureDetector(
         onTap: () {
-          // This moves from the personal info page to the credentials page,
-          // replacing this page with that one.
           Navigator.of(context)
               .pushReplacementNamed('signup/choose_credentials');
         },

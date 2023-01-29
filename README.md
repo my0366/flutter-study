@@ -51,8 +51,53 @@ Swift의 SuperView에 상반 되는 개념으로 상태바나 좌,우,하단터�
 
 공식 문서를 참고하여 튜토리얼 진행 -> LayoutTutorial.dart로 작업 + 상호작용 추가하기 진행 해보았습니다
 
-출처 : https://flutter-ko.dev/docs/development/ui/layout/tutorial
+출처 : https://flutter-ko.dev/docs/development/ui/layout/tutorial\
+
+## Navigator
+
+- Navigator API
+스택 형식으로 하위 위젯들을 관리하는 위젯
+
+스택 관리의 두 가지 방법
+- Navigator.push
+Swift pushViewController와 비슷한 개념, 해당 Navigate Stack에 View를 push하는 형식
+- Navigator.pop
+Swift PopViewController와 비슷한 개념, 한 페이지 이전으로 돌아가며 Stack에서 한 개의 뷰를 pop하는 형식
 
 
+Navigator를 사용하지 않아도 Scaffold 위젯을 사용하면 BackButton이 자동으로 추가될 수 있음.
+
+- Pages API
+Route 스택을 통해 경로를 표시하고 해당 경로로 이동
+
+route에 경로를 선언하며, interaction에 pushNamed를 통해 화면 이동
+
+돌아올 때에는 Navigator.pop으로 되돌아가기 수행
+
+Navigate 폴더에 진행해서 파일 정리해두었습니다.
+
+## Animate
+
+- Implicit Animation
+
+애니메이션이 이미 프로그래밍 되어있거나, 스타일이 입혀져있다
+
+애니메이션을 시작 타이밍을 지정할 필요가 없다. 값이 변함에 따라 자동으로 애니메이션이 일어난다.
+
+- Explicit Animation
+
+위젯에서는 제공하지 않는 애니메이션 커스터마이징을 할 수 있다.
+
+애니메이션을 컨트롤하기 위해 AnimationController를 등록해야 한다.
+AnimationBuilder를 사용해서 내 입맛대로 애니메이션을 구현할 수 있다.
+리스너, 티커 등 커스터마이징을 위한 다른 요소를 등록한다.
+반드시 애니메이션의 트리거를 지정해줘야한다.
 
 
+## Sliver
+
+화면 헤더를 동적으로 표현하는 위젯이다.
+
+하단 스크롤을 할 때 AppBar를 축소, 확대하는 애니메이션을 얻을수 있다.
+
+어떤위젯인지는 알겠는데 자세하게는 잘 모르겠습니다.
