@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const AppBarApp());
 
+//Sliver
 class AppBarApp extends StatelessWidget {
   const AppBarApp({super.key});
 
