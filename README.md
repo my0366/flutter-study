@@ -162,3 +162,23 @@ ex) final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey = GlobalKey<Refr
 property에 child를 추가할 경우 해당 child count만큼 페이지가 생성 된다.
 
 페이지를 이동하는 방향을 조정하려면 scrollDirection에서 Axis를 vertical, horizental을 통해 변경가능하다.
+
+## NestedScrollView
+
+위 사진과 같이 AppBar 하단에 Tabbar 위젯을 배치하고, 해당 탭 마다 서로 다른 스크롤 뷰를 보여줄수 있게 하는 위젯이다.
+
+탭 바는 클릭 및 페이지 뷰 처럽 제스처를 통해 페이지 전환이 가능하다.
+
+## CustomScrollView
+
+슬리버를 이용해 커스텀(목록, 그리드 및 확장 헤더와 같은 다양한 스크롤 효과) 스크롤뷰를 만들수 있는 위젯이다.
+
+CustomScrollView의 property
+- slivers 
+Array형식으로 Sliver를 이용해 다양한 슬리버를 조합해서 사용가능하게 해준다.
+
+ex) SliverAppBar, SliverGrid, SliverList등 다양한 조합 가능
+
+## ScrollBar
+
+
