@@ -101,3 +101,28 @@ AnimationBuilder를 사용해서 내 입맛대로 애니메이션을 구현할 �
 하단 스크롤을 할 때 AppBar를 축소, 확대하는 애니메이션을 얻을수 있다.
 
 어떤위젯인지는 알겠는데 자세하게는 잘 모르겠습니다.
+
+## ScrollView
+- GridView
+![](../../grid_view.png)
+
+화면에 grid 형태로 widget들을 배치할 수 있도록하고, listView와 마찬가지로 스크롤 기능이 제공되며, 구현할때 두 가지를 꼭 정의해줘야하며 생성하는 방법에는 4가지가 있다.
+
+- GridView
+- GridView.count
+- GridView.builder
+- GridView.extent
+- 
+우선 GridView.count를 생성하는데 편하며, delegate를 지정하지 않고 child에 widget를 list형식으로 넣어서 구현가능하다.
+GridView.count()를 제외하고 나머지위 3개는 필수 구현해줘야하는 gridDelegate, children이 있다.
+
+
+delegate는 대리자로서, 실제 구현은 외부에 위임하고, 내부에서는 외부에서 구현한 메소드를 참고하게 된다.
+내부 구현해야되는 프로퍼티는 아래 4개가 있다.
+- crossAxisCount : crossAxis 방향으로 몇개의 grid를 배치할 것인지 결정
+- crossAxisSpacing : 그리드 사이의 좌우 간격
+- mainAxisSpacing : 그리드 사이의 수직 간격
+- childAspectRatio : child의 가로 세로 비율
+
+
+
