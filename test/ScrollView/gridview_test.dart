@@ -12,26 +12,6 @@ void main() {
     expect(appBarTitleFinder, findsOneWidget);
   });
 
-  // testWidgets('GridView Has Nothing', (tester) async {
-  //   await tester.pumpWidget(const MyApp());
-  //   int itemCount = 6;
-  //   const childWidget = GridViewApp();
-  //
-  //   // Provide the childWidget to the Container.
-  //   await tester.pumpWidget(const MaterialApp(home: childWidget));
-  //
-  //   //컨테이너 찾기
-  //   var container = find.byType(Container);
-  //
-  //   expect(container, findsOneWidget);
-  //
-  //   //gridview찾기
-  //   var gridView = find.byType(GridView);
-  //
-  //   expect(gridView, findsOneWidget);
-  //
-  //   expect(gridView, findsNothing);
-  // });
 
   testWidgets('GridView Has Data', (tester) async {
     await tester.pumpWidget(const MyApp());

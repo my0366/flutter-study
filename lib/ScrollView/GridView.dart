@@ -67,7 +67,7 @@ class _GridViewAppState extends State<GridViewApp> {
           Container(
             padding: const EdgeInsets.all(8),
             color: Colors.teal[600],
-            child: const Text('Revolution, they...'),
+            child: const Text('Revolution, they...')
           ),
         ],
       ),

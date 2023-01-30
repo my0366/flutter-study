@@ -103,7 +103,6 @@ AnimationBuilder를 사용해서 내 입맛대로 애니메이션을 구현할 �
 어떤위젯인지는 알겠는데 자세하게는 잘 모르겠습니다.
 
 ## ScrollView
-- GridView
 ![](../../grid_view.png)
 
 화면에 grid 형태로 widget들을 배치할 수 있도록하고, listView와 마찬가지로 스크롤 기능이 제공되며, 구현할때 두 가지를 꼭 정의해줘야하며 생성하는 방법에는 4가지가 있다.
@@ -112,7 +111,7 @@ AnimationBuilder를 사용해서 내 입맛대로 애니메이션을 구현할 �
 - GridView.count
 - GridView.builder
 - GridView.extent
-- 
+
 우선 GridView.count를 생성하는데 편하며, delegate를 지정하지 않고 child에 widget를 list형식으로 넣어서 구현가능하다.
 GridView.count()를 제외하고 나머지위 3개는 필수 구현해줘야하는 gridDelegate, children이 있다.
 
@@ -123,6 +122,21 @@ delegate는 대리자로서, 실제 구현은 외부에 위임하고, 내부에�
 - crossAxisSpacing : 그리드 사이의 좌우 간격
 - mainAxisSpacing : 그리드 사이의 수직 간격
 - childAspectRatio : child의 가로 세로 비율
+
+## ListView
+
+ListView 는 가장 일반적으로 사용되는 스크롤 위젯이며. 스크롤 방향으로 자식을 차례로 표시한다.
+
+ListView 를 구성하는 네 가지 옵션이 있다
+
+-ListView
+목록을 구성 하려면 실제로 표시되는 자식만이 아니라 ListView에 표시될 수 있는 모든 자식에 대해 작업을 수행해야 하기 때문에 소수의 자식이 있는 목록 보기에 적합하다.
+- ListView.builder
+ 필요에 따라 자식을 빌드하는 IndexedWidgetBuilder를 사용해 실제로 표시되는 자식에 대해서만 호출되기 때문에 이 생성자는 자식위젯이 많은 경우에 적합하다.
+- ListView.separated
+두 개의 IndexedWidgetBuilder를 사용해 필요에 따라 자식 항목을 separatorBuilder 빌드하고 자식 항목 사이에 나타나는 구분자 자식을 유사하게 빌드합니다. 이 생성자는 고정된 수의 자식이 있는 목록 보기에 적합합니다.
+- ListView.custom
+자식 위젯을 커스텀할 수 있는 기능을 제공하는 SliverChildDelegate 를 사용해서, SliverChildDelegate 는 실제로 보이지 않는 자식의 크기를 추정하는데 사용되는 알고리즘을 제어할 수 있습니다.
 
 
 
