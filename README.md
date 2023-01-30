@@ -181,4 +181,12 @@ ex) SliverAppBar, SliverGrid, SliverList등 다양한 조합 가능
 
 ## ScrollBar
 
+ListView나 GridView같이 스크롤 가능한 위젯이 있을 경우 ScrollBar로 감싸주어 Scroll Indicator를 보여주는 위젯이다
+
+trackVisibility : 스크롤바를 보여줄지 bool값으로 정의
+thumbVisibility : 스크롤중이 아니더라도 스크롤바를 보여줄지 bool값으로 정의
+radius : 스크롤바의 radius 정의 
+controller : ScrollController를 구현하는데 상용되는 컨트롤러 저으이
+notificationPredicate : ScrollNotification을 처리해야하는지 정의
+
 
