@@ -31,21 +31,29 @@ Const로 선언된 변수의 경우 그 코드의 수명기간동안 변경되�
 ## Flutter Layout
 
 - Column / Row
+
 Column 위젯은 자식 위젯들을 세로로 정렬하여 표시하며. Column 위젯은 세로의 모든 영역을 차지한다.
 Row 위젯은 자식 위젯들을 모두 가로로 정렬하여 표시하며, Row 위젯은 가로의 모든 영억을 차지한다.
 mainAxisAlignment 파라미터를 이용하면, 자식 위젯들의 정렬을 변경할 수 있다.
+
 - Center
 자식 위젯들을 중앙에 표시한다.
+
 - Expanded
 Column 위젯 또는 Row 위젯과 함께 사용하여 웹에서의 flex와 같은 기능을 구현할 수 있다.
+
 - Stack
-위젯 위에 위젯을 표시할 수 있습니다
+위젯 위에 위젯을 표시할 수 있다.
+
 - SizedBox
 위젯과 위젯 사이에 빈 공간을 추가할 때 자주 사용된다.
+
 - Container 
 기본적으로 최대한의 공간을 차지하여 표시한다.그리고 Container 내의 자식 위젯이 생성되면 Container위젯은 자식 위젯의 크기만큼 조정되어서 표시된다.
+
 - Padding
 자식 위젯 주위에 padding을 표시한다.
+
 - SafeArea
 Swift의 SuperView에 상반 되는 개념으로 상태바나 좌,우,하단터치바에 겹쳐서 표시되지 않게한다. 
 
@@ -102,9 +110,8 @@ AnimationBuilder를 사용해서 내 입맛대로 애니메이션을 구현할 �
 
 어떤위젯인지는 알겠는데 자세하게는 잘 모르겠습니다.
 
-## ScrollView
+## GridView
 ![](../../grid_view.png)
-
 화면에 grid 형태로 widget들을 배치할 수 있도록하고, listView와 마찬가지로 스크롤 기능이 제공되며, 구현할때 두 가지를 꼭 정의해줘야하며 생성하는 방법에는 4가지가 있다.
 
 - GridView
@@ -129,7 +136,7 @@ ListView 는 가장 일반적으로 사용되는 스크롤 위젯이며. 스크�
 
 ListView 를 구성하는 네 가지 옵션이 있다
 
--ListView
+- ListView
 목록을 구성 하려면 실제로 표시되는 자식만이 아니라 ListView에 표시될 수 있는 모든 자식에 대해 작업을 수행해야 하기 때문에 소수의 자식이 있는 목록 보기에 적합하다.
 - ListView.builder
  필요에 따라 자식을 빌드하는 IndexedWidgetBuilder를 사용해 실제로 표시되는 자식에 대해서만 호출되기 때문에 이 생성자는 자식위젯이 많은 경우에 적합하다.
@@ -138,5 +145,20 @@ ListView 를 구성하는 네 가지 옵션이 있다
 - ListView.custom
 자식 위젯을 커스텀할 수 있는 기능을 제공하는 SliverChildDelegate 를 사용해서, SliverChildDelegate 는 실제로 보이지 않는 자식의 크기를 추정하는데 사용되는 알고리즘을 제어할 수 있습니다.
 
+## Refresh Indicator
+
+스크롤 가능한 리스트 형식의 위젯을 pull down 하거나 다른 이벤트에 추가해서 trigger를 작동시키면 refresh가 발생한다.
+
+- onRefresh 내에 새로 고침시 일어날 함수 실행이 가능하며, return 값으로는 Future Type 완료됐을 경우 refreshIndicator가 사라지게 된다.
+
+- trigger를 통해 새로고침은 refreshIndicatorKey를 등록해서 등록된 키의 onRefresh 함수를 실행시킬수 있다.
+ex) final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey = GlobalKey<RefreshIndicatorState>();
 
 
+## PageView
+
+페이지별로 작동하는 스크롤 가능한 목록이며, 페이지 뷰의 각 자식은 뷰포트와 같은 크기여야 한다.
+
+property에 child를 추가할 경우 해당 child count만큼 페이지가 생성 된다.
+
+페이지를 이동하는 방향을 조정하려면 scrollDirection에서 Axis를 vertical, horizental을 통해 변경가능하다.
