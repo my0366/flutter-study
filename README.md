@@ -189,4 +189,15 @@ radius : 스크롤바의 radius 정의
 controller : ScrollController를 구현하는데 상용되는 컨트롤러 저으이
 notificationPredicate : ScrollNotification을 처리해야하는지 정의
 
+## SingleChildScrollView
+
+스크롤 가능한 자식 위젯을 하나만 가지는 것이다.
+
+자식 위젯이 하나인데 그 위젯이 너무 작아서 화면을 다 못 채우거나, 화면 보다 더 큰 경우 스크롤 뷰로 감싸서 보여주는 위젯이다.
+
+스크롤뷰의 하위 클래스로서 스크롤뷰의 property를 다 사용가능하며 오류가 나는 화면들을 모두 정상적으로 표현가능하게 만들어준다.
+
+만약 SingleChild위젯으로 감싸지 않으면 아래 사진처럼 에러가 난다.
+
+
 
