@@ -227,15 +227,19 @@ Form을 부모 위젯으로 가지고 있지 않아도 되며, TextField propert
 property
 
 autofocus
+ 
 범위 내에서 다른 노드가 현재 포커스되어 있지 않을 때 이 위젯이 초기 포커스로 선택되었는지
 
 foucsNode
+ 
 위젯에 키보드 포커스가 있는지 여부 
 
 includeSemantics
+ 
 위젯의 시맨틱 정보
 
 onKey
+ 
 위젯이 키보드 이벤트를 수신할 때마다 호출된다.
 
 ## Text
@@ -272,9 +276,13 @@ TextSpan 위젯은 명시적으로 스타일을 지정해주어야하며, text�
 Property
 
 size             화면 크기 size 
+ 
 size.height      화면 높이 
+ 
 size.width       화면 넓이 
+ 
 devicePixelRatio 화면 배율    
+ 
 padding.top      상단바 높이
 
 - Padding
@@ -282,21 +290,29 @@ padding.top      상단바 높이
 지정된 패딩만큼 위젯을 축소하여 자식이 더 작은 크기로 레이아웃하도록 합니다.그 후 자식 위젯을 크기에 맞게 크기를 조정하고 부모 위젯(패딩)에 의해 확대되어 효과적으로 자식 주위에 빈 공간을 만듭니다
 
 Property
+ 
 padding  EdgeInsets 제약조건 명시
+ 
 child    자식 위젯 명시
 
 - Theme
 
 Theme을 정의 해서 편리하게 이용가능하다.
+ 
 Theme.of로 ThemeData를 생성해 MaterialApp 내의 자식 위젯에 대한 전체적인 테마 구성을 정의한다.
+ 
 해당 메서드는 가장 가까운 BuildContext 부모에 대해 지정된 ThemeData 값을 찾습니다. 
 
 정리해서 개발하는데 미리 테마를 정의 해놓고, 그 정의해둔 테마를 MaterialApp 디자인때 편리하게 이용가능하게 도와주는 위젯이다.
 
 ThemeData의 property
+ 
 primaryColor : 앱 바의 색상 정의
+ 
 bodyText : 앱 바 제외한 화면의 텍스트 컬러 정의
+ 
 accentColor : FloatingActionButton 컬러 정의
+![material_app_theme_data](https://user-images.githubusercontent.com/72657893/215681628-f52ca76a-b679-4b24-b995-bc67e910ce06.png)
 
 참고 : https://mechurak.github.io/2022-10-10_flutter-theme/ 및 공식 문서
 
