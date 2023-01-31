@@ -237,7 +237,27 @@ includeSemantics
 onKey
 위젯이 키보드 이벤트를 수신할 때마다 호출된다.
 
+## Text
 
+- DefaultTextStyle
+명시적 스타일이 없는 텍스트 위젯을 만들때 사용한다
+
+- Text
+단일 스타일의 텍스트 위젯이며, 레아이웃에 따라 줄이 끊어지거나 ...으로 보일수 있다.
+
+스타일 선택은 옵션이며, 선택하지 않았을 경우 기본값으로 DefaultTextStyle을 사용한다.
+
+Text에 상호작용을 추가하려면 GestureDetector.onTap을 이용해 GestrueDetector 위젯애 텍스트를 하위 위젯으로 추가한다.
+
+- RichText
+
+html에서 span과 같은 기능을 수행할 수 있으며, 다양한 스타일을 사용하는 텍스트를 표시할 수 있다.
+
+TextSpan 위젯은 명시적으로 스타일을 지정해주어야하며, text에는 처음에 올 텍스트, children에는 자식 위젯으로 올 텍스트 위젯을
+명시해준다.
+
+추가적으로 Selectable Text 위젯을 만들려면 property중 selectionRegistrar 및 selectionColor로 Text를 상호작용
+가능하게 만들어줄 수 있다.(위의 Text위젯도 가능하다.)
 
 
 
