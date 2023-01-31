@@ -199,5 +199,48 @@ notificationPredicate : ScrollNotification을 처리해야하는지 정의
 
 만약 SingleChild위젯으로 감싸지 않으면 아래 사진처럼 에러가 난다.
 
+## Input
+
+- Form
+
+여러양식의 필드위젯을 그룹화 시킬수 있는 위젯이다
+
+각 개별 위젯은 FormField 위젯으로 Wrap되여야하며 Form위젯은 모든 자식위젯들의 부모위젯이다ㅣ.
+
+Form의 자식위젯을 save,vaildation check등을 하기위해 FormState에서 상황에 맞는 메서드를 호출해서 사용가능하다
+
+FormState는 GlobalKey, Form.of 두 가지 방법을 통해 Form의 상태를 관리할 수 있다.
+
+- TextFormField
+
+TextField를 포함하고 있는 Form위젯이다.
+
+Form형식으로 자식 위젯(TextFormField)들의 상태를 관리를 편하게 사용할 수있다. 
+
+Form을 부모 위젯으로 가지고 있지 않아도 되며, TextField property를 모두 사용가능하다(TextCapitalization,TextStyle 등등).
+
+- RawKeyboardListener
+
+사용자가 키보드 위를 누르거나 놓을때마다 콜백을 호출해서 액션을 지정할 수 있는 위젯
+
+property
+
+autofocus
+범위 내에서 다른 노드가 현재 포커스되어 있지 않을 때 이 위젯이 초기 포커스로 선택되었는지
+
+foucsNode
+위젯에 키보드 포커스가 있는지 여부 
+
+includeSemantics
+위젯의 시맨틱 정보
+
+onKey
+위젯이 키보드 이벤트를 수신할 때마다 호출된다.
+
+
+
+
+
+
 
 
