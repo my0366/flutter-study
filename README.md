@@ -111,7 +111,8 @@ AnimationBuilder를 사용해서 내 입맛대로 애니메이션을 구현할 �
 어떤위젯인지는 알겠는데 자세하게는 잘 모르겠습니다.
 
 ## GridView
-![](../../grid_view.png)
+![grid_view](https://user-images.githubusercontent.com/72657893/215667988-7b06d3e2-92a2-4ee9-97a5-8d67c309d983.png)
+
 화면에 grid 형태로 widget들을 배치할 수 있도록하고, listView와 마찬가지로 스크롤 기능이 제공되며, 구현할때 두 가지를 꼭 정의해줘야하며 생성하는 방법에는 4가지가 있다.
 
 - GridView
@@ -135,7 +136,7 @@ delegate는 대리자로서, 실제 구현은 외부에 위임하고, 내부에�
 ListView 는 가장 일반적으로 사용되는 스크롤 위젯이며. 스크롤 방향으로 자식을 차례로 표시한다.
 
 ListView 를 구성하는 네 가지 옵션이 있다
-
+![Simulator Screen Shot - iPhone 14 Pro - 2023-01-30 at 13 00 38](https://user-images.githubusercontent.com/72657893/215668038-05a67767-ca3f-4667-9fef-ddf3606bb700.png)
 - ListView
 목록을 구성 하려면 실제로 표시되는 자식만이 아니라 ListView에 표시될 수 있는 모든 자식에 대해 작업을 수행해야 하기 때문에 소수의 자식이 있는 목록 보기에 적합하다.
 - ListView.builder
@@ -164,7 +165,7 @@ property에 child를 추가할 경우 해당 child count만큼 페이지가 생�
 페이지를 이동하는 방향을 조정하려면 scrollDirection에서 Axis를 vertical, horizental을 통해 변경가능하다.
 
 ## NestedScrollView
-
+<img width="346" alt="스크린샷 2023-01-30 오후 2 33 00" src="https://user-images.githubusercontent.com/72657893/215668070-68ac3fbb-039c-4d20-aafd-f27880aab64b.png">
 위 사진과 같이 AppBar 하단에 Tabbar 위젯을 배치하고, 해당 탭 마다 서로 다른 스크롤 뷰를 보여줄수 있게 하는 위젯이다.
 
 탭 바는 클릭 및 페이지 뷰 처럽 제스처를 통해 페이지 전환이 가능하다.
@@ -189,7 +190,10 @@ radius : 스크롤바의 radius 정의
 controller : ScrollController를 구현하는데 상용되는 컨트롤러 저으이
 notificationPredicate : ScrollNotification을 처리해야하는지 정의
 
-## SingleChildScrollView
+## SingleChildScrollView!
+
+오류 화면
+[Simulator Screen Shot - iPhone 14 Pro - 2023-01-31 at 09 51 25](https://user-images.githubusercontent.com/72657893/215668104-5b12514a-2626-479d-b5f4-9c051b1dd250.png)
 
 스크롤 가능한 자식 위젯을 하나만 가지는 것이다.
 
@@ -212,7 +216,7 @@ Form의 자식위젯을 save,vaildation check등을 하기위해 FormState에서
 FormState는 GlobalKey, Form.of 두 가지 방법을 통해 Form의 상태를 관리할 수 있다.
 
 - TextFormField
-
+<img width="301" alt="스크린샷 2023-01-31 오후 12 56 38" src="https://user-images.githubusercontent.com/72657893/215668165-54c03475-4468-425f-840a-484db07ad4ee.png">
 TextField를 포함하고 있는 Form위젯이다.
 
 Form형식으로 자식 위젯(TextFormField)들의 상태를 관리를 편하게 사용할 수있다. 
