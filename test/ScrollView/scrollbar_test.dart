@@ -12,6 +12,15 @@ void main() {
     expect(appBarTitleFinder, findsOneWidget);
   });
 
+
+  testWidgets('has scrollBar', (tester) async {
+
+    await tester.pumpWidget(const MyApp());
+
+    final scrollBar = find.byType(Scrollbar);
+
+    expect(scrollBar, findsOneWidget);
+  });
   //
   testWidgets('ListView has index12 when Tester scrolled vertical 300 points', (tester) async {
     await tester.pumpWidget(const MyApp());
