@@ -12,19 +12,15 @@ void main() {
     expect(appBarTitleFinder, findsOneWidget);
   });
 
-  testWidgets('ListView Has Data', (tester) async {
+  //
+  testWidgets('ListView has index12 when Tester scrolled vertical 300 points', (tester) async {
     await tester.pumpWidget(const MyApp());
 
-    final listFinder = find.byType(Scrollable);
-    final itemFinder = find.byKey(const ValueKey('textKey'));
+    final itemFinder = find.text("Scrollable 1 : Index 12");
 
-    await tester.scrollUntilVisible(
-      itemFinder,
-      1000.0,
-      scrollable: listFinder,
-    );
-
+    await tester.drag(find.byType(ListView), const Offset(0.0, -300.0));
+    await tester.pump();
     // Verify that the item contains the correct text.
-    expect(itemFinder, findsNWidgets(100));
+    expect(itemFinder, findsOneWidget);
   });
 }

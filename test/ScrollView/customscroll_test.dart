@@ -14,7 +14,11 @@ void main() {
   testWidgets('SliverGridView Has Data List', (tester) async {
     await tester.pumpWidget(const MyApp());
     int itemCount = 20;
-    var text = find.byKey(const ValueKey("Container"));
-    expect(text, findsNWidgets(itemCount));
+
+    var text = find.text("Grid Item 12");
+    await tester.drag(find.byType(SliverGrid), const Offset(0.0, -300.0));
+    await tester.pump();
+
+    expect(text, findsOneWidget);
   });
 }

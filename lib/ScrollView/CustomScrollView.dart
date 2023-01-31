@@ -27,10 +27,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-    const Key centerKey = ValueKey<String>('bottom-sliver-list');
     return Scaffold(
       body : CustomScrollView(
-        center: centerKey,
         slivers: <Widget>[
           const SliverAppBar(
             pinned: true,
@@ -51,11 +49,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 return Container(
                   alignment: Alignment.center,
                   color: Colors.teal[100 * (index % 9)],
-                  key: const Key("Container"),
                   child: Text('Grid Item $index'),
                 );
               },
-              childCount: 20,
+              childCount: 200,
             ),
           ),
         ],
