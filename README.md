@@ -132,11 +132,11 @@ delegate는 대리자로서, 실제 구현은 외부에 위임하고, 내부에�
 - childAspectRatio : child의 가로 세로 비율
 
 ## ListView
+![스크린샷 2023-01-31 오후 1 51 32](https://user-images.githubusercontent.com/72657893/215668515-8d6e3f43-5165-4c7b-9201-80e2e7eb7732.png)
 
 ListView 는 가장 일반적으로 사용되는 스크롤 위젯이며. 스크롤 방향으로 자식을 차례로 표시한다.
 
 ListView 를 구성하는 네 가지 옵션이 있다
-![Simulator Screen Shot - iPhone 14 Pro - 2023-01-30 at 13 00 38](https://user-images.githubusercontent.com/72657893/215668038-05a67767-ca3f-4667-9fef-ddf3606bb700.png)
 - ListView
 목록을 구성 하려면 실제로 표시되는 자식만이 아니라 ListView에 표시될 수 있는 모든 자식에 대해 작업을 수행해야 하기 때문에 소수의 자식이 있는 목록 보기에 적합하다.
 - ListView.builder
@@ -190,11 +190,8 @@ radius : 스크롤바의 radius 정의
 controller : ScrollController를 구현하는데 상용되는 컨트롤러 저으이
 notificationPredicate : ScrollNotification을 처리해야하는지 정의
 
-## SingleChildScrollView!
-
-오류 화면
-[Simulator Screen Shot - iPhone 14 Pro - 2023-01-31 at 09 51 25](https://user-images.githubusercontent.com/72657893/215668104-5b12514a-2626-479d-b5f4-9c051b1dd250.png)
-
+## SingleChildScrollView
+![스크린샷 2023-01-31 오후 1 50 58](https://user-images.githubusercontent.com/72657893/215668454-c4acec11-5f4e-46ff-80d8-440df0e50591.png)
 스크롤 가능한 자식 위젯을 하나만 가지는 것이다.
 
 자식 위젯이 하나인데 그 위젯이 너무 작아서 화면을 다 못 채우거나, 화면 보다 더 큰 경우 스크롤 뷰로 감싸서 보여주는 위젯이다.
