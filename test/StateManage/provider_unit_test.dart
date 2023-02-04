@@ -1,12 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_study/StateManage/Provider/ProviderModel.dart';
-
+import 'package:flutter_study/StateManage/Provider/provider_provider.dart';
 void main() {
   //Example
 
   group('Counter Test', () {
     final counter = Counts();
-    test('Counter value should be incremented', () {
+    test('Counter value should be increment', () {
       counter.increase();
 
       expect(counter.count, 1);
