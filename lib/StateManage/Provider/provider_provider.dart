@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/StateManage/Provider/provider_state.dart';
+import 'provider_state.dart';
 
-class Counts with ChangeNotifier {
-  int _count = 0;
-  int get count => _count;
+class Provider_Provider with ChangeNotifier {
+
+  final state = ProviderState();
 
   void increase() {
-    _count++;
-
+    state.count++;
     notifyListeners();
   }
 
   void decrease() {
-    _count--;
-
+    state.count--;
     notifyListeners();
   }
 }

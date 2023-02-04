@@ -4,7 +4,7 @@ void main() {
   //Example
 
   group('Counter Test', () {
-    final counter = Counts();
+    final counter = Provider_Provider();
     test('Counter value should be increment', () {
       counter.increase();
 

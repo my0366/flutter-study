@@ -8,7 +8,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => Counts()),
+        ChangeNotifierProvider(create: (_) => Provider_Provider()),
       ],
       child: MyApp(),
     ),
@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
         title: const Text('Provider App'),
       ),
       body: ChangeNotifierProvider(
-        create: (BuildContext context) => Counts(),
+        create: (BuildContext context) => Provider_Provider(),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -62,6 +62,7 @@ class Button extends StatefulWidget {
 class _ButtonState extends State<Button> {
   bool isEnabled = false;
 
+
   @override
   void initState() {
     super.initState();
@@ -70,13 +71,14 @@ class _ButtonState extends State<Button> {
 
   @override
   Widget build(BuildContext context) {
+    final provider = context.read<Provider_Provider>();
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ElevatedButton(
             key: const Key("increase Button"),
             onPressed: () {
-              context.read<Counts>().increase();
+              provider.increase();
               isDecreaseButtonDisabled = false;
             },
             child: const Icon(Icons.add)),
@@ -88,8 +90,8 @@ class _ButtonState extends State<Button> {
 
             onPressed: () {
               print(isDecreaseButtonDisabled);
-              isDecreaseButtonDisabled ? null : context.read<Counts>().decrease();
-              if (context.read<Counts>().count == 0) {
+              isDecreaseButtonDisabled ? null : provider.decrease();
+              if (context.read<Provider_Provider>().state.count == 0) {
                 isDecreaseButtonDisabled = true;
               } else {
                 isDecreaseButtonDisabled = false;
@@ -102,4 +104,19 @@ class _ButtonState extends State<Button> {
   }
 }
 
+class Counter extends StatelessWidget {
+  const Counter({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    final provider = context.read<Provider_Provider>();
+    final state = provider.state;
+    return Text(
+      "Count = ${state.count}",
+      key: const Key("result Text"),
+      style: const TextStyle(
+        fontSize: 20,
+      ),
+    );
+  }
+}
