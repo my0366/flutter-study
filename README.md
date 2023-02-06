@@ -316,5 +316,10 @@ accentColor : FloatingActionButton 컬러 정의
 
 참고 : https://mechurak.github.io/2022-10-10_flutter-theme/ 및 공식 문서
 
+## Provider
 
+https://www.notion.so/Flutter-1b83f501414642fea208136601cdaa51#8443e351e0084913af947dc640bc829c
 
+## Bloc
+
+https://www.notion.so/Flutter-1b83f501414642fea208136601cdaa51#1b44cbcef5f6400992e8f53e26d463a5
