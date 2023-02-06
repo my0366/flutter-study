@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_study/StateManage/Bloc/BlocProvier.dart';
-import 'package:flutter_study/StateManage/Bloc/Bloc.dart';
+import 'package:flutter_study/StateManage/Bloc/Bloc_view.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -8,7 +7,7 @@ void main() {
 
     await tester.pumpWidget(CounterApp());
 
-    final appBarTitleFinder = find.text('Provider App');
+    final appBarTitleFinder = find.text('Bloc Test');
 
     expect(appBarTitleFinder, findsOneWidget);
   });

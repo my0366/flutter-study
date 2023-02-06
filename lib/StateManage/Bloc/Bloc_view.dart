@@ -13,7 +13,7 @@ class CounterApp extends StatelessWidget {
     return MaterialApp(
       home: BlocProvider<CounterBloc>(
         create: (_) => CounterBloc(),
-        child: CounterApp_State(),
+        child: const CounterApp_State(),
       ),
     );
   }
@@ -27,10 +27,11 @@ class CounterApp_State extends StatefulWidget {
 
 class _CounterApp_StateState extends State<CounterApp_State> {
 
-  CounterBloc counterBloc = CounterBloc();
+
 
   @override
   Widget build(BuildContext context) {
+    CounterBloc counterBloc = BlocProvider.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text('Bloc Test')),
       body: BlocBuilder<CounterBloc, CounterState> (
