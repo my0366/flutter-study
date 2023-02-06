@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_study/StateManage/Provider/provider_provider.dart';
 import 'package:flutter_study/StateManage/Provider/provider_view.dart';
+import 'package:provider/provider.dart';
 void main() {
   testWidgets('AppBar', (tester) async {
 

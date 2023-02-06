@@ -109,10 +109,10 @@ class Counter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.read<Provider_Provider>();
-    final state = provider.state;
+    final provider = context.watch<Provider_Provider>().state;
+    final state = provider.count;
     return Text(
-      "Count = ${state.count}",
+      "Count = ${state}",
       key: const Key("result Text"),
       style: const TextStyle(
         fontSize: 20,

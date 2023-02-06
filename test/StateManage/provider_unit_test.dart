@@ -6,16 +6,17 @@ void main() {
   group('Counter Test', () {
     final counter = Provider_Provider();
     test('Counter value should be increment', () {
+
       counter.increase();
 
-      expect(counter.count, 1);
+      expect(counter.state.count, 1);
     });
 
     // decrement
     test('Counter value should be decrement', () {
 
       counter.decrease();
-      expect(counter.count, 0);
+      expect(counter.state.count, 0);
     });
   });
 
